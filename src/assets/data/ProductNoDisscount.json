@@ -1,0 +1,8 @@
+[
+    { "ID": 6, "Name": "Samsung" , "Quantity": 10 , "Price":6590 , "Img":"6.jpg"} ,
+    { "ID": 7,"Name": " OOPO" , "Quantity": 11 , "Price":6990 , "Img":"7.jpg"},
+    { "ID": 8, "Name": "Nokia" , "Quantity": 8 , "Price":880 , "Img":"8.jpg"},
+    { "ID": 9, "Name": "Iphon" , "Quantity": 5 , "Price":11090 , "Img":"9.jpg"},
+    { "ID": 10, "Name": "Haway" , "Quantity": 9 , "Price":4390 , "Img":"10.jpg"},
+    { "ID": 11, "Name": "Relmi" , "Quantity": 7 , "Price":4480 , "Img":"11.jpg"}
+]

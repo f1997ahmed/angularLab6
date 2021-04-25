@@ -1,0 +1,29 @@
+<div class="container">
+    <form #userForm="ngForm"  novalidate (ngSubmit)="onSubmit(userForm)">
+     <!--    {{userForm.value |json}} -->
+        <br>
+       <!--- {{userModel |json}}-->
+
+        <div class="form-group">
+            <label>Email :</label>
+            <input type="email" name="txtEmail" #email="ngModel" [(ngModel)]="userModel.email" class="form-control" [class.is-invalid]="email.invalid && email.touched"  required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+            <div *ngIf="email.errors && email.touched">
+                <small class="text-danger" *ngIf="email.errors.required">Email is required</small>
+                <small class="text-danger" *ngIf="email.errors.pattern">Email must contains @ and .</small>
+              </div>  
+        </div>
+
+        <div class="form-group">
+            <label>Password :</label>
+            <input type="password" #password="ngModel" required [class.is-invalid]="password.invalid && password.touched"
+             pattern="^\d{8}$"  name="txtpassword"[(ngModel)]="userModel.password" class="form-control">
+          
+            <div *ngIf="password.errors && password.touched">
+             <small class="text-danger" *ngIf="password.errors.required">Password is required</small>
+             <small class="text-danger" *ngIf="password.errors.pattern">Password must be 8 digits</small>
+           </div>  
+        </div>
+        <input type="submit" class="btn btn-primary" value="Login">
+    </form>
+</div>
+

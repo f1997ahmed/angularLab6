@@ -1,0 +1,6 @@
+[
+    { "ID": 1,"Name": " Dell" , "Quantity": 6 , "Price":9990 , "Img":"1.jpg"},
+    { "ID": 2, "Name": "Lonovo" , "Quantity": 8 , "Price":8880 , "Img":"2.jpg"},
+    { "ID": 3, "Name": "HP" , "Quantity": 5 , "Price":10090 , "Img":"3.jpg"},
+    { "ID": 4, "Name": "Sony" , "Quantity": 9 , "Price":4290 , "Img":"4.jpg"}
+]

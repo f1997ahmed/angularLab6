@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head><title></title></head>
+<body>
+   <!-- <div style="background-image:
+ url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJZ7yPmPaQGwmSrq2o3kqf_h8kOtX2Z74szg&usqp=CAU);
+height: 680px; width: 100%; background-size: cover;background-position: center center;">-->
+<div style="background-image:
+ url(https://cdn.pixabay.com/photo/2017/05/11/11/15/workplace-2303851_960_720.jpg);
+height: 980px; width: 100%; background-size: cover;background-position: center center;">
+
+
+
+
+
+
+<div class="container-fluid" *ngIf="IsPurshased" >
+    <div class="row "  style="color: aliceblue">
+    
+    <div class="col-4 text-center">
+        <h2>{{StoreName | uppercase}}</h2>
+       <img [src]="ProductList[0].Img" >
+       
+<div *ngIf="NoDiscount else dDiscount">
+
+</div>
+<!--
+<ng-template #dDiscount>
+    <div>Welcome Guest </div>
+</ng-template>-->
+
+       <ng-template #dDiscount>
+        <div>We offer an explicit discount of:<p>{{Discount |currency}}</p></div>
+    </ng-template>
+    
+    
+    
+    
+    
+    
+    </div>
+    
+    
+    </div>
+    </div>
+    <pre>
+    <menu>
+     <div style="text-align:left;"> ...&nbsp; ...&nbsp; ...&nbsp; ...&nbsp;&nbsp;<input type="button" class="asd" value="Buy" (click)="toggle()"></div></menu></pre>
+    <div >
+
+        <p>Select a Categories:</p>
+        
+        <select  >
+        <option *ngFor="let cat of CategoryList">
+            {{cat.Name}}</option>
+        </select>
+    </div>
+       <!-- ng-model="selectedCategory" <h1>You selected: {{selectedCategory}}</h1>
+         <td><input type="button" class="asd" value="Buy"></td>
+     -->
+       <div class="d-flex p-2" *ngIf="!IsPurshased">{{"Thanks for purchasing from our Store" + ClientName }}</div>
+       
+       <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Img</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let pro of ProductList" >
+                <td>{{pro.ID}} </td>
+                <td>{{pro.Name}}</td>
+                <td>{{pro.Quantity}}</td>
+                <td>{{pro.Price}}</td>
+                <td>{{pro.Img}}</td>
+               
+            </tr>
+        </tbody>
+    </table>
+    <input type="text" [(ngModel)]="ClientName" >
+        <p>Welcome: {{ClientName}}</p>  
+    </div>
+
+   <!-- <div *ngFor="let product of Products ">
+        {{"Product Name is "+product.Name}}
+       </div>-->
+
+       <table>
+        <thead>
+          <tr style="background-color: powderblue;">
+            <th>Product Name  -</th>
+          </tr>
+        </thead>
+     
+          <tbody *ngFor="let pro of ProductList">
+            <tr>
+            <td style="background-color: peachpuff;">{{pro.Name}}</td>
+            </tr>
+        </tbody>
+      </table>
+
+      <button (click)="gotToDisscount()">Go to Disscount</button>
+<button (click)="gotToNotDisscount()">Go to No Disscount</button>
+
+<router-outlet></router-outlet>
+</body>
+</html>

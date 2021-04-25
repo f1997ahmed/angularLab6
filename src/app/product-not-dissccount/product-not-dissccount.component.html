@@ -1,0 +1,21 @@
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Img</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let pro of ProductList" >
+            <td>{{pro.ID}} </td>
+            <td>{{pro.Name}}</td>
+            <td>{{pro.Quantity}}</td>
+            <td>{{pro.Price}}</td>
+            <td>{{pro.Img}}</td>
+           
+        </tr>
+    </tbody>
+</table>
